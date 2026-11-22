@@ -5,6 +5,17 @@
 ### Dokumentasi
 
 - Memperjelas README proyek, panduan menjalankan prototipe, dan urutan demonstrasi untuk peninjauan Worksheet 12.
+- Melengkapi dokumentasi eksperimen PRD + Skill dengan spesifikasi UX, sistem desain, spesifikasi interaksi, kriteria penerimaan, dan panduan agen AI.
+
+### Perbaikan
+
+- Mempertahankan hasil KRS terakhir ketika draf diubah dari tab lain.
+- Menahan tindakan yang memakai draf lama ketika tab lain sudah menyimpan pilihan baru. Pengguna melihat draf terbaru beserta pesan untuk meninjau ulang sebelum melanjutkan.
+- Mempertahankan layar yang dipilih pengguna jika penyimpanan draf selesai setelah pengguna berpindah layar.
+
+### Verifikasi
+
+- Mengulang alur demo di Chrome pada lebar 360 dan 1440 px. Skenario dua tab dan perpindahan layar tercatat pada [kriteria penerimaan](ACCEPTANCE-CRITERIA.md#hasil-verifikasi-pembaruan).
 
 ## 1.0.0
 

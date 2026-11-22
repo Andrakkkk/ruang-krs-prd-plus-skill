@@ -61,8 +61,9 @@ Gunakan data kelas pada PRD. Setiap kasus dimulai dengan keadaan draf/hasil yang
 | AC06-03 / P1 | Penyimpanan dibuat gagal sebelum perubahan draf. | Tambah atau hapus kelas. | Perubahan terlihat selama halaman terbuka dan pemberitahuan menjelaskan penyimpanan sementara. Tidak ada jaminan perubahan bertahan setelah muat ulang. | Injeksi kegagalan dan UI. |
 | AC06-04 / P1 | Data lokal tidak dapat diurai atau memuat identitas kelas tidak valid. | Muat aplikasi. | Tidak ada crash; data yang tidak valid tidak menjadi kelas pilihan; pemberitahuan pemulihan terlihat dan penawaran tetap dapat digunakan. | Injeksi data rusak dan UI. |
 | AC06-05 / P1 | Hasil dua kelas berhasil tersimpan. | Pilih **Mulai pengisian baru**, tambah satu kelas baru, lalu buka Hasil. | Draf baru terpisah; hasil lama masih berisi dua kelas sampai penyimpanan hasil berikutnya berhasil. Tombol hasil dapat menawarkan **Lanjutkan pengisian**. | UI dan daftar draf/hasil. |
-| AC06-06 / P0 | Dua tab A/B menggunakan alamat dan profil yang sama; B sudah membaca keadaan lama. | A menyimpan hasil UX301-A dan UX302-B. Setelah itu B melakukan perubahan draf dari keadaan lamanya. | Perubahan draf B tidak menghapus atau mengganti hasil terbaru A. Setelah keadaan terbaru dimuat, Hasil tetap berisi dua kelas A/6 SKS, kecuali pengguna kemudian secara sengaja menyimpan hasil baru. Bila tindakan B ditahan karena usang, alasannya terlihat. | Jalankan urutan dua tab secara deterministik; periksa UI dan data persisten. **Belum dinyatakan lulus sampai penanggung jawab validasi mengonfirmasi.** |
-| AC06-07 / P0 | Tab A/B membaca draf yang sama. A kemudian mengubah draf dan berhasil menyimpannya; B masih memegang versi lama. | B mencoba tambah, ganti, hapus, atau simpan hasil berdasarkan draf lama. | Draf terbaru A tidak ditimpa secara diam-diam. Tindakan usang B ditahan dengan penjelasan serta jalur meninjau keadaan terbaru; tidak ada pesan berhasil untuk perubahan yang belum diterapkan. Setelah meninjau ulang, pengguna dapat melanjutkan dari data terbaru. | Ulangi urutan deterministik untuk setiap jenis mutasi. **Belum dinyatakan lulus sampai penanggung jawab validasi mengonfirmasi.** |
+| AC06-06 / P0 | Dua tab memakai alamat dan profil yang sama. Tab B sudah membaca keadaan lama. | Tab A menyimpan hasil UX301-A dan UX302-B. Tab B kemudian mengubah draf. | Hasil dari tab A tetap berisi dua kelas dan 6 SKS setelah dimuat ulang. Jika draf tab B perlu ditinjau ulang, tampilkan alasannya. | Uji dua tab, lalu periksa tampilan dan penyimpanan. |
+| AC06-07 / P0 | Kedua tab membaca draf yang sama. Tab A menyimpan perubahan saat tab B masih memegang versi lama. | Tab B mencoba tambah, ganti, hapus, atau simpan hasil berdasarkan draf lama. | Aplikasi mempertahankan draf terbaru, menahan tindakan tab B, dan menampilkan pesan untuk meninjau pilihan terbaru. | Ulangi urutan dua tab untuk keempat tindakan. |
+| AC06-08 / P1 | Pengguna sudah mengonfirmasi penambahan dan penyimpanan draf masih berjalan. | Pengguna membuka layar Hasil sebelum penyimpanan draf selesai. | Setelah perubahan tersimpan, ringkasan SKS diperbarui dan pengguna tetap berada di layar Hasil. | Tahan operasi penyimpanan, pindah layar, lalu lanjutkan penyimpanan. |
 
 ## UXR-07 Total dan batas SKS
 
@@ -83,3 +84,14 @@ Gunakan data kelas pada PRD. Setiap kasus dimulai dengan keadaan draf/hasil yang
 Rilis demo memerlukan seluruh P0 dan P1 yang masuk lingkup lulus, atau pengecualian tertulis dengan dampak dan tindak lanjut. AC08-02 tetap tertunda. Catatan kegagalan harus menyebut ID kasus dan hasil aktual; jangan mengubah kriteria hanya agar hasil tampak lulus.
 
 Pemeriksaan ini membuktikan perilaku prototipe, bukan capaian pengguna. Waktu interpretasi, penurunan kesalahan, rasa yakin, dan kepuasan pada Worksheet 8 memerlukan uji pengguna terpisah. Angka kinerja atau persentase keberhasilan pada worksheet tidak boleh dilaporkan sebagai hasil demo tanpa pengukuran.
+
+## Hasil verifikasi pembaruan
+
+| Skenario | Hasil |
+|---|---|
+| Alur demo di Chrome, lebar 360 dan 1440 px | Lulus untuk lima layar, pencarian, bentrok dan batas jam, status kelas, konfirmasi, penggantian, penghapusan, batas SKS, kegagalan simpan, dan pemuatan ulang hasil. |
+| AC06-06, perubahan draf dari tab lain | Lulus. Kedua kelas dan 6 SKS pada hasil terakhir tetap tersimpan. |
+| AC06-07, tindakan dengan draf lama | Lulus. Percobaan tambah, ganti, hapus, dan simpan menampilkan peringatan tanpa menimpa draf terbaru atau hasil terakhir. |
+| AC06-08, perpindahan layar saat penyimpanan | Lulus. Setelah penambahan selesai, layar Hasil tetap terbuka dan total SKS draf diperbarui. |
+
+Tabel mencatat skenario yang dijalankan pada pembaruan ini. Pemeriksaan penuh seluruh kriteria serta pengukuran pengalaman pengguna dan durasi eksperimen memerlukan pencatatan terpisah.

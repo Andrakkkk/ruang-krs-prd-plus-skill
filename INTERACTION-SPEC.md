@@ -67,7 +67,7 @@ Perubahan draf saja tidak boleh mengganti hasil terbaru yang berhasil disimpan m
 
 Jika tab lain telah mengubah draf, tab lama tidak boleh diam-diam menimpa pilihan tersebut. Pertahankan draf terbaru, beri penjelasan bahwa data telah berubah, dan arahkan pengguna meninjau keadaan terbaru sebelum melanjutkan. Permintaan dari tab lama belum dianggap berhasil jika belum diterapkan. Kegagalan penyimpanan tetap memberikan pesan serta kesempatan mencoba lagi.
 
-Ini merupakan kontrak perlindungan data yang harus dibuktikan melalui skenario deterministik dua tab **AC06-06** dan **AC06-07**. Dokumen ini tidak menyatakan perbaikan atau pengujiannya sudah selesai; status lulus dicatat setelah penanggung jawab validasi mengonfirmasi hasil aktual.
+Jika pengguna sudah berpindah layar ketika perubahan draf selesai, perbarui ringkasan draf di layar yang sedang dibuka. Perpindahan otomatis ke Tinjau KRS berlaku ketika pengguna masih berada di detail kelas yang memulai penambahan. Pemeriksaan perlindungan data dan navigasi dicatat pada **AC06-06** sampai **AC06-08**.
 
 ## Responsif, fokus, dan akses
 
