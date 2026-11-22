@@ -4,7 +4,18 @@ Ruang KRS adalah prototipe pengisian Kartu Rencana Studi untuk mahasiswa Univers
 
 Versi ini menggunakan PRD yang sama dengan versi PRD saja, ditambah skill **Rancang KRS Mobile**. Skill tersebut memandu cara menampilkan informasi jadwal dan bentrok, menjaga akses ke draf pada layar ponsel, serta mengembalikan fokus keyboard saat pengguna kembali ke pilihan sebelumnya. Prototipe mencakup lima layar dari penawaran mata kuliah hingga hasil simulasi. Data kelas, batas 8 SKS, dan hasil pengajuan bersifat simulasi.
 
-[Spesifikasi kebutuhan produk (PRD)](PRD.md) · [Skill Rancang KRS Mobile](.agents/skills/rancang-krs-mobile/SKILL.md) · [Catatan perubahan](CHANGELOG.md)
+## Dokumen eksperimen
+
+| Dokumen | Peran |
+|---|---|
+| [PRD](PRD.md) | Kebutuhan, ruang lingkup, dan data demo yang juga digunakan versi PRD saja |
+| [Spesifikasi UX](UX-SPEC.md) | Struktur lima layar, navigasi, dan alur pengguna |
+| [Sistem desain](DESIGN-SYSTEM.md) | Aturan tampilan, komponen, dan tata letak responsif |
+| [Spesifikasi interaksi](INTERACTION-SPEC.md) | Perilaku pemilihan kelas, umpan balik, dan pemulihan kesalahan |
+| [Kriteria penerimaan](ACCEPTANCE-CRITERIA.md) | Skenario dan hasil yang harus diperiksa |
+| [Panduan agen AI](AGENTS.md) | Urutan membaca spesifikasi, mengerjakan perubahan, dan melaporkan hasil uji |
+
+[Skill Rancang KRS Mobile](.agents/skills/rancang-krs-mobile/SKILL.md) · [Catatan perubahan](CHANGELOG.md)
 
 ## Menjalankan prototipe
 
