@@ -34,7 +34,7 @@ Untuk pekerjaan antarmuka KRS di ponsel, gunakan juga [Skill Rancang KRS Mobile]
 ## 4. Development Workflow
 
 1. **Analyze.** Tentukan skenario, kebutuhan UXR, dan kriteria penerimaan yang terkena perubahan.
-2. **Project Setup.** Buka `index.html` langsung atau jalankan `python -m http.server 8000` dari folder repositori.
+2. **Project Setup.** Buka [ruang-krs/index.html](ruang-krs/index.html) langsung. Untuk server lokal, jalankan `python -m http.server 8000` dari root repo dan buka [localhost:8000/ruang-krs/](http://localhost:8000/ruang-krs/).
 3. **Design Implementation.** Susun atau perbaiki layar dan tindakan sesuai spesifikasi UX dan sistem desain.
 4. **Functional Implementation.** Terapkan validasi, perpindahan fokus, dan penyimpanan sesuai spesifikasi interaksi.
 5. **Validation.** Uji perilaku yang terdampak, lalu catat perubahan dan bukti verifikasi.
@@ -48,11 +48,11 @@ Untuk pekerjaan antarmuka KRS di ponsel, gunakan juga [Skill Rancang KRS Mobile]
 
 ## 6. Component Architecture
 
-`index.html` memuat struktur dasar, `styles.css` memuat sistem visual, `krs.js` mengelola data, validasi dan penyimpanan, serta `app.js` mengelola navigasi, tampilan dan umpan balik.
+Aplikasi berada di `ruang-krs/`. Di dalamnya, `index.html` memuat struktur dasar, `styles.css` memuat sistem visual, `krs.js` mengelola data, validasi dan penyimpanan, serta `app.js` mengelola navigasi, tampilan dan umpan balik. `index.html` pada root meneruskan tautan demo lama beserta fragmen rutenya ke folder aplikasi.
 
 ## 7. Code Quality Rules
 
-Gunakan pengenal yang menjelaskan perannya dan terapkan aturan validasi pada satu tempat yang dipakai oleh setiap tindakan terkait. Pertahankan jalur aset relatif. Jalankan `node --check app.js` dan `node --check krs.js` saat mengubah JavaScript.
+Gunakan pengenal yang menjelaskan perannya dan terapkan aturan validasi pada satu tempat yang dipakai oleh setiap tindakan terkait. Pertahankan jalur aset relatif. Dari root repo, jalankan `node --check ruang-krs/app.js` dan `node --check ruang-krs/krs.js` saat mengubah JavaScript.
 
 ## 8. Responsive Design Rules
 

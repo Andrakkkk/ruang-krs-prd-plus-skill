@@ -19,7 +19,9 @@ Versi ini menggunakan PRD yang sama dengan versi PRD saja, ditambah skill **Ranc
 
 ## Menjalankan prototipe
 
-Buka `index.html` di peramban dengan JavaScript aktif. Pertahankan seluruh berkas sumber dalam satu folder. Prototipe dapat dijalankan secara luring tanpa memasang dependensi.
+Buka [ruang-krs/index.html](ruang-krs/index.html) di peramban dengan JavaScript aktif. Seluruh berkas aplikasi (`index.html`, `app.js`, `krs.js`, dan `styles.css`) berada dalam folder `ruang-krs/`; dokumen eksperimen tetap berada di root repositori. Pertahankan struktur folder tersebut. Prototipe dapat dijalankan secara luring tanpa memasang dependensi.
+
+`index.html` di root mengarahkan ke folder aplikasi dengan mempertahankan query dan rute hash pada tautan lama.
 
 Jika peramban membatasi penyimpanan dari berkas lokal, jalankan perintah berikut dari folder repositori menggunakan Python.
 
@@ -27,7 +29,7 @@ Jika peramban membatasi penyimpanan dari berkas lokal, jalankan perintah berikut
 python -m http.server 8000
 ```
 
-Buka [Ruang KRS di server lokal](http://localhost:8000/). Untuk memuat kembali draf dan hasil, gunakan alamat dan profil peramban yang sama.
+Buka [Ruang KRS di server lokal](http://localhost:8000/ruang-krs/). Contoh tautan langsung ke detail kelas: [Rekayasa Interaksi A](http://localhost:8000/ruang-krs/#/kelas/UX301-A). Untuk memuat kembali draf dan hasil, gunakan alamat dan profil peramban yang sama.
 
 ## Skenario demonstrasi
 

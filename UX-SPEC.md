@@ -365,8 +365,8 @@ Dokumen UX ini menjadi acuan untuk:
 1. Sitemap lima layar dan rute hash.
 2. User flow tambah, ganti, pemeriksaan bentrok, dan penyimpanan hasil.
 3. Page specification PAGE-01 sampai PAGE-05.
-4. Prototipe interaktif pada [index.html](index.html), [app.js](app.js), dan [krs.js](krs.js).
-5. UI design dan responsive design pada [styles.css](styles.css) serta [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
+4. Prototipe interaktif pada [ruang-krs/index.html](ruang-krs/index.html), [ruang-krs/app.js](ruang-krs/app.js), dan [ruang-krs/krs.js](ruang-krs/krs.js).
+5. UI design dan responsive design pada [ruang-krs/styles.css](ruang-krs/styles.css) serta [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
 6. Interaction specification dan kriteria penerimaan pada dokumen terkait.
 
 Perilaku diperiksa melalui skenario dalam ACCEPTANCE-CRITERIA. Pemahaman pengguna, keberhasilan tugas, serta waktu penyelesaian tetap memerlukan evaluasi pengguna; dokumen ini bukan laporan bahwa evaluasi tersebut telah lulus.

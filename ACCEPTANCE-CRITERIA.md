@@ -42,7 +42,7 @@ Rincian metode pada setiap kasus menentukan pemeriksaan yang diperlukan; label m
 
 ## **Test Setup**
 
-Gunakan data kelas pada PRD. Setiap kasus dimulai dengan keadaan draf/hasil yang disebutkan, menggunakan profil uji terpisah. Pengujian perubahan draf tidak boleh bergantung pada sisa skenario sebelumnya. Pemeriksaan viewport dilakukan pada **360 × 800** dan **1440 × 900 piksel CSS**, zoom 100%. Pembatasan penyimpanan dan data rusak disimulasikan melalui harness atau alat pengembang khusus pengujian, bukan ditambahkan sebagai kontrol produk.
+Gunakan data kelas pada PRD. Jalankan server statis dari root repositori sebagaimana dijelaskan di [README](README.md), lalu buka aplikasi pada `http://localhost:8000/ruang-krs/`. Setiap kasus dimulai dengan keadaan draf/hasil yang disebutkan, menggunakan profil uji terpisah. Pengujian perubahan draf tidak boleh bergantung pada sisa skenario sebelumnya. Pemeriksaan viewport dilakukan pada **360 × 800** dan **1440 × 900 piksel CSS**, zoom 100%. Pembatasan penyimpanan dan data rusak disimulasikan melalui harness atau alat pengembang khusus pengujian, bukan ditambahkan sebagai kontrol produk.
 
 # **3. Informasi dan Navigasi Mobile**
 
@@ -104,7 +104,7 @@ Gunakan data kelas pada PRD. Setiap kasus dimulai dengan keadaan draf/hasil yang
 
 **Priority:** P0
 
-**Verification:** Cocokkan teks dengan PRD dan `krs.js`.
+**Verification:** Cocokkan teks dengan PRD dan [ruang-krs/krs.js](ruang-krs/krs.js).
 
 **Given:** Data demo belum diubah.
 

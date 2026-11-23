@@ -3,37 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ruang KRS, simulasi pemilihan kelas untuk mahasiswa UMM.">
-  <title>Ruang KRS</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="krs.js" defer></script>
-  <script src="app.js" defer></script>
+  <title>Buka Ruang KRS</title>
+  <script>
+    const appUrl = new URL("./ruang-krs/index.html", location.href);
+    appUrl.search = location.search;
+    appUrl.hash = location.hash;
+    location.replace(appUrl.href);
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#konten">Lompat ke konten</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <div class="brand-area">
-        <a class="brand" href="#/penawaran" aria-label="Ruang KRS, penawaran mata kuliah">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span>Ruang KRS</span>
-        </a>
-        <span class="simulation-label">Mode simulasi</span>
-      </div>
-      <nav class="main-nav" aria-label="Navigasi utama">
-        <a href="#/penawaran" data-nav="penawaran">Penawaran</a>
-        <a href="#/tinjau" data-nav="tinjau">Tinjau KRS <span id="draft-count" class="nav-count" aria-hidden="true">0</span></a>
-        <a href="#/hasil" data-nav="hasil">Hasil</a>
-      </nav>
-    </div>
-  </header>
-  <main id="konten" class="shell page" tabindex="-1">
-    <noscript>Aktifkan JavaScript untuk menjalankan simulasi Ruang KRS.</noscript>
+  <main>
+    <h1>Ruang KRS</h1>
+    <p><a href="./ruang-krs/index.html">Buka prototipe Ruang KRS</a></p>
   </main>
-  <footer class="site-footer shell">
-    <span>Ruang KRS</span>
-    <span>Simulasi untuk mahasiswa UMM · Seluruh data merupakan contoh.</span>
-  </footer>
-  <div id="announcement" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>

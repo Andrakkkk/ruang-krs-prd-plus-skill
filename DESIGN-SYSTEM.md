@@ -14,7 +14,7 @@
 
 ## **1.1 Design Concept**
 
-Ruang kerja akademik dengan latar krem hangat, teks navy, dan aksen merah bata. Judul serif memberi hierarki, sedangkan font sistem membantu pembacaan informasi kelas. Spesifikasi mengikuti [styles.css](styles.css), struktur [index.html](index.html), dan komponen [app.js](app.js).
+Ruang kerja akademik dengan latar krem hangat, teks navy, dan aksen merah bata. Judul serif memberi hierarki, sedangkan font sistem membantu pembacaan informasi kelas. Spesifikasi mengikuti [ruang-krs/styles.css](ruang-krs/styles.css), struktur [ruang-krs/index.html](ruang-krs/index.html), dan komponen [ruang-krs/app.js](ruang-krs/app.js).
 
 Karakteristik desain:
 
