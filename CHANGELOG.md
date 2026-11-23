@@ -6,6 +6,7 @@
 
 - Memperjelas README proyek, panduan menjalankan prototipe, dan urutan demonstrasi untuk peninjauan Worksheet 12.
 - Melengkapi dokumentasi eksperimen PRD + Skill dengan spesifikasi UX, sistem desain, spesifikasi interaksi, kriteria penerimaan, dan panduan agen AI.
+- Menata keenam dokumen spesifikasi mengikuti struktur template dosen. PRD tetap identik antarversi, dan ID kriteria serta catatan pengujian sebelumnya dipertahankan.
 
 ### Perbaikan
 
