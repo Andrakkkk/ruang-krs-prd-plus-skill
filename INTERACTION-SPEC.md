@@ -228,7 +228,7 @@ Navigasi menampilkan total draf dibanding batas 8 SKS. Panel desktop merangkum k
 
 1. Pengguna memeriksa daftar dan total, lalu memilih **Simpan hasil simulasi**. Draf kosong membuat tombol ini nonaktif.
 2. Sistem menampilkan keadaan diproses dan menahan aktivasi ulang.
-3. Setelah penulisan berhasil, sistem mengganti hasil dan mengosongkan draf dalam satu penulisan, lalu membuka Hasil.
+3. Setelah penulisan berhasil, sistem mengganti hasil dan mengosongkan draf dalam satu penulisan. Hasil terbuka otomatis jika pengguna masih berada di layar Tinjau KRS yang memulai penyimpanan. Jika pengguna telah berpindah layar, aplikasi memperbarui ringkasan dan mempertahankan layar pilihan pengguna.
 4. Dari Hasil, **Mulai pengisian baru** membuka Penawaran. Jika sudah ada draf baru, tombol tampil sebagai **Lanjutkan pengisian**.
 
 # **11\. Empty State Interaction**

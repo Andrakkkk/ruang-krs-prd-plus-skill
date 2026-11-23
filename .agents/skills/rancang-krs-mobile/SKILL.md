@@ -11,7 +11,7 @@ description: Rancang dan periksa antarmuka mobile Ruang KRS versi PRD + Skill, t
 - Gunakan [UX Specification](../../../UX-SPEC.md) untuk layar dan alur, [Design System](../../../DESIGN-SYSTEM.md) untuk token serta komponen, dan [Interaction Specification](../../../INTERACTION-SPEC.md) untuk konfirmasi, fokus, dan pemulihan.
 - Pilih kasus terdampak dari [Acceptance Criteria](../../../ACCEPTANCE-CRITERIA.md). Dokumen proyek menyimpan rincian; jangan menyalinnya menjadi aturan baru di skill.
 
-Kode aplikasi berada di `ruang-krs/` pada root repositori: `index.html`, `styles.css`, `app.js`, dan `krs.js`. Bedakan hasil simulasi dari pendaftaran resmi. Matriks jadwal mingguan tetap di luar rilis demo; perubahan antarmuka tidak menambah integrasi InfoKHS atau kebijakan akademik.
+Buka [struktur aplikasi](../../../README.md#struktur-aplikasi) untuk menemukan tampilan, aturan jadwal, penyimpanan, dan CSS di folder `ruang-krs/`. Gunakan penanda simulasi pada pengajuan dan hasil. Matriks jadwal mingguan, integrasi InfoKHS, dan aturan akademik resmi berada di luar lingkup demo.
 
 ## Informasi dan keputusan kelas
 

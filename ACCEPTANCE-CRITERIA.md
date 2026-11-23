@@ -104,7 +104,7 @@ Gunakan data kelas pada PRD. Jalankan server statis dari root repositori sebagai
 
 **Priority:** P0
 
-**Verification:** Cocokkan teks dengan PRD dan [ruang-krs/krs.js](ruang-krs/krs.js).
+**Verification:** Cocokkan teks dengan PRD dan [data kelas](ruang-krs/src/data/courses.js).
 
 **Given:** Data demo belum diubah.
 
@@ -458,6 +458,7 @@ Setiap kasus memerlukan catatan hasil sebelum dinyatakan lulus. Gunakan kolom be
 | AC06-06, perubahan draf dari tab lain | Lulus. Kedua kelas dan 6 SKS pada hasil terakhir tetap tersimpan. |
 | AC06-07, tindakan dengan draf lama | Lulus. Percobaan tambah, ganti, hapus, dan simpan menampilkan peringatan tanpa menimpa draf terbaru atau hasil terakhir. |
 | AC06-08, perpindahan layar saat penyimpanan | Lulus. Setelah penambahan selesai, layar Hasil tetap terbuka dan total SKS draf diperbarui. |
+| Penyimpanan hasil akhir saat pengguna berpindah layar | Lulus. Hasil tersimpan, total draf diperbarui, dan layar Penawaran tetap terbuka sampai pengguna memilih layar lain. |
 
 Tabel mencatat skenario yang dijalankan pada pembaruan ini. Pemeriksaan penuh seluruh kriteria serta pengukuran pengalaman pengguna dan durasi eksperimen memerlukan pencatatan terpisah.
 

@@ -9,17 +9,24 @@
 - Menata keenam dokumen spesifikasi mengikuti struktur template dosen. PRD tetap identik antarversi, dan ID kriteria serta catatan pengujian sebelumnya dipertahankan.
 - Menempatkan sumber aplikasi dalam folder `ruang-krs/` dan memperbarui tautan, petunjuk menjalankan proyek, serta rujukan verifikasi pada Skill Rancang KRS Mobile.
 
+### Struktur kode
+
+- Memisahkan data penawaran, validasi jadwal, penyimpanan, navigasi, dan logika tindakan ke modul tersendiri.
+- Menempatkan template lima layar dan komponen bersama dalam `src/ui/`. Memisahkan gaya dasar, tata letak, komponen, dan gaya responsif dalam `assets/css/`.
+
 ### Perbaikan
 
 - Mempertahankan hasil KRS terakhir ketika draf diubah dari tab lain.
 - Menahan tindakan yang memakai draf lama ketika tab lain sudah menyimpan pilihan baru. Pengguna melihat draf terbaru beserta pesan untuk meninjau ulang sebelum melanjutkan.
 - Mempertahankan layar yang dipilih pengguna jika penyimpanan draf selesai setelah pengguna berpindah layar.
 - Meneruskan tautan demo lama dari root repo ke folder aplikasi, termasuk parameter URL dan fragmen rutenya.
+- Mempertahankan layar pilihan pengguna jika penyimpanan hasil akhir selesai setelah pengguna berpindah layar.
 
 ### Verifikasi
 
 - Mengulang alur demo di Chrome pada lebar 360 dan 1440 px. Skenario dua tab dan perpindahan layar tercatat pada [kriteria penerimaan](ACCEPTANCE-CRITERIA.md#hasil-verifikasi-pembaruan).
 - Memeriksa pembukaan folder `ruang-krs/` dari berkas lokal dan server statis, termasuk pemulihan rute detail kelas dari tautan root.
+- Menguji ulang versi modular pada lebar 360 dan 1440 px. Tampilan penawaran dan peringatan bentrok pada kedua ukuran sama dengan hasil sebelum pemisahan berkas.
 
 ## 1.0.0
 

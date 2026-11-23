@@ -48,11 +48,11 @@ Untuk pekerjaan antarmuka KRS di ponsel, gunakan juga [Skill Rancang KRS Mobile]
 
 ## 6. Component Architecture
 
-Aplikasi berada di `ruang-krs/`. Di dalamnya, `index.html` memuat struktur dasar, `styles.css` memuat sistem visual, `krs.js` mengelola data, validasi dan penyimpanan, serta `app.js` mengelola navigasi, tampilan dan umpan balik. `index.html` pada root meneruskan tautan demo lama beserta fragmen rutenya ke folder aplikasi.
+Aplikasi berada di `ruang-krs/`. Data kelas ada di `src/data/`, aturan jadwal di `src/domain/`, dan penyimpanan di `src/infrastructure/`. `src/router.js` memetakan alamat ke layar, `src/app.js` menangani keadaan dan tindakan pengguna, serta `src/ui/` menghasilkan tampilan tiap layar. Gaya visual berada di `assets/css/`. Lihat [struktur aplikasi](README.md#struktur-aplikasi) sebelum memindahkan tanggung jawab antara modul. `index.html` pada root meneruskan tautan demo lama beserta fragmen rutenya ke folder aplikasi.
 
 ## 7. Code Quality Rules
 
-Gunakan pengenal yang menjelaskan perannya dan terapkan aturan validasi pada satu tempat yang dipakai oleh setiap tindakan terkait. Pertahankan jalur aset relatif. Dari root repo, jalankan `node --check ruang-krs/app.js` dan `node --check ruang-krs/krs.js` saat mengubah JavaScript.
+Gunakan pengenal yang menjelaskan perannya dan terapkan aturan validasi pada satu tempat yang dipakai oleh setiap tindakan terkait. Pertahankan jalur aset relatif dan urutan skrip pada `ruang-krs/index.html` agar mode berkas lokal tetap berfungsi. Jalankan `node --check` pada setiap berkas JavaScript yang diubah.
 
 ## 8. Responsive Design Rules
 

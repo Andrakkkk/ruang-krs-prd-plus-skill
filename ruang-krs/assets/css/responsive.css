@@ -1,0 +1,22 @@
+@media (max-width: 55rem) {
+  .workspace { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .draft-panel { display: none; }
+}
+
+@media (max-width: 37rem) {
+  .header-inner { display: block; }
+  .brand-area { min-height: 3.6rem; justify-content: space-between; }
+  .main-nav { display: grid; grid-template-columns: auto 1fr auto; gap: .15rem; border-top: 1px solid var(--line); padding-block: .18rem; }
+  .main-nav a { justify-content: center; gap: .27rem; padding-inline: .42rem; font-size: .82rem; }
+  .nav-count { padding-inline: .26rem; font-size: .69rem; }
+  .page { padding-block: 1.45rem 2.6rem; }
+  .page-intro { margin-bottom: 1.35rem; }
+  .page-intro > p:not(.course-context) { margin-top: .55rem; font-size: .918rem; }
+  .back-link { margin: -.52rem 0 .52rem; }
+  .course-grid, .option-grid { grid-template-columns: minmax(0, 1fr); gap: .65rem; }
+  .list-heading { margin-top: 1.2rem; }
+  .course-card { min-height: auto; }
+  .course-card h3 { margin-top: .45rem; }
+  .selection-list li { padding: .84rem .7rem .84rem .85rem; }
+  .selection-info h2 { font-size: 1.14rem; }
+}

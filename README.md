@@ -19,7 +19,7 @@ Versi ini menggunakan PRD yang sama dengan versi PRD saja, ditambah skill **Ranc
 
 ## Menjalankan prototipe
 
-Buka [ruang-krs/index.html](ruang-krs/index.html) di peramban dengan JavaScript aktif. Seluruh berkas aplikasi (`index.html`, `app.js`, `krs.js`, dan `styles.css`) berada dalam folder `ruang-krs/`; dokumen eksperimen tetap berada di root repositori. Pertahankan struktur folder tersebut. Prototipe dapat dijalankan secara luring tanpa memasang dependensi.
+Buka [ruang-krs/index.html](ruang-krs/index.html) di peramban dengan JavaScript aktif. Aplikasi dapat dijalankan secara luring tanpa memasang dependensi. Pertahankan struktur folder sehingga browser dapat memuat aset dan skripnya.
 
 `index.html` di root mengarahkan ke folder aplikasi dengan mempertahankan query dan rute hash pada tautan lama.
 
@@ -30,6 +30,35 @@ python -m http.server 8000
 ```
 
 Buka [Ruang KRS di server lokal](http://localhost:8000/ruang-krs/). Contoh tautan langsung ke detail kelas: [Rekayasa Interaksi A](http://localhost:8000/ruang-krs/#/kelas/UX301-A). Untuk memuat kembali draf dan hasil, gunakan alamat dan profil peramban yang sama.
+
+## Struktur aplikasi
+
+```text
+ruang-krs/
+├── index.html                 Struktur halaman dan urutan pemuatan aset
+├── assets/css/
+│   ├── site.css               Titik masuk CSS
+│   ├── base.css               Token warna, gaya dasar, dan fokus
+│   ├── layout.css             Tata letak dan navigasi
+│   ├── components.css         Kartu, tombol, formulir, dan status
+│   └── responsive.css         Penyesuaian untuk layar sempit
+└── src/
+    ├── app.js                 Keadaan aplikasi dan pengendali tindakan
+    ├── router.js              Pemetaan alamat ke layar
+    ├── data/courses.js         Data kelas simulasi
+    ├── domain/schedule.js      Aturan bentrok dan total SKS
+    ├── infrastructure/
+    │   └── storage.js         Penyimpanan draf dan hasil di browser
+    └── ui/
+        ├── shared.js          Komponen yang dipakai bersama
+        ├── offerings.js       Layar penawaran dan pencarian
+        ├── options.js         Layar pilihan kelas
+        ├── detail.js          Layar detail dan konfirmasi kelas
+        ├── review.js          Layar tinjau KRS
+        └── results.js         Layar hasil simulasi
+```
+
+HTML memuat skrip lokal sesuai urutan dependensinya agar aplikasi dapat dijalankan langsung dari berkas maupun melalui server statis. Dokumen eksperimen tersedia di tingkat utama repositori.
 
 ## Skenario demonstrasi
 

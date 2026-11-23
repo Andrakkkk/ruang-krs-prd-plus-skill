@@ -1,0 +1,135 @@
+.site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
+
+.header-inner {
+  display: flex;
+  min-height: 4.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand-area, .brand, .main-nav { display: flex; align-items: center; }
+.brand-area { gap: 1rem; }
+
+.brand {
+  min-height: 2.75rem;
+  gap: .6rem;
+  font: bold 1.5rem/1 Georgia, serif;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  position: relative;
+  width: 2.125rem;
+  height: 2.125rem;
+  flex: 0 0 auto;
+  border-radius: .425rem;
+  background: var(--brick);
+}
+
+.brand-mark::before, .brand-mark::after { position: absolute; content: ''; }
+
+.brand-mark::before {
+  inset: .59rem .45rem .44rem;
+  border: 1.5px solid var(--paper);
+  border-radius: .16rem;
+  background: linear-gradient(var(--paper), var(--paper)) 0 .3rem / 100% 1px no-repeat;
+}
+
+.brand-mark::after {
+  top: .38rem;
+  left: .77rem;
+  width: .09rem;
+  height: .36rem;
+  border-radius: 1px;
+  background: var(--paper);
+  box-shadow: .5rem 0 var(--paper);
+}
+
+.simulation-label {
+  padding: .2rem .5rem;
+  border: 1px solid var(--line);
+  border-radius: .3rem;
+  color: var(--muted);
+  font-size: .75rem;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.main-nav { gap: .4rem; font-size: .88rem; }
+
+.main-nav a {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  gap: .45rem;
+  padding: .35rem .68rem;
+  border-radius: .375rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.main-nav a:hover, .main-nav a[aria-current] { background: var(--rail); }
+.main-nav a[aria-current] { color: var(--brick-dark); }
+
+.nav-count, .balance {
+  padding: .15rem .42rem;
+  border-radius: .33rem;
+  background: var(--brick-pale);
+  color: var(--brick-dark);
+  font-size: .75rem;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.page { flex: 1 0 auto; padding-block: 2.7rem 4rem; }
+.page-intro { margin-bottom: 2rem; }
+
+.page-intro h1 {
+  max-width: 100%;
+  font: 400 clamp(2.4rem, 5.25vw, 4.05rem)/1.04 Georgia, serif;
+  letter-spacing: -.045em;
+  overflow-wrap: anywhere;
+}
+
+.page-intro > p:not(.course-context) { margin-top: .78rem; color: var(--muted); }
+.page-intro .course-context { margin-bottom: .65rem; }
+
+.course-context, .card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  color: var(--muted);
+  font-size: .84rem;
+  font-weight: 650;
+}
+
+.course-code {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .055em;
+  color: var(--brick-dark);
+}
+
+.back-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: .5rem;
+  margin: -.7rem 0 .8rem;
+  color: var(--brick-dark);
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+.back-link:hover { text-decoration: underline; text-underline-offset: .22em; }
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15.25rem, 18.5rem);
+  gap: 1.6rem;
+  align-items: start;
+}
