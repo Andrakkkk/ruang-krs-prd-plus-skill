@@ -1,5 +1,12 @@
 # Changelog Ruang KRS
 
+## 24 November 2026 · Penawaran semester ganjil dan riwayat nilai
+
+- Memperluas katalog menjadi 26 mata kuliah dengan 234 kelas A–I untuk mahasiswa semester 7. Kelas lama tetap dapat diakses melalui tautan dan draf tersimpan.
+- Menaikkan batas menjadi 24 SKS dan menambahkan filter semester serta riwayat nilai. Nilai A memblokir pengambilan ulang semua kelas mata kuliah tersebut.
+- Menguji katalog di Chrome pada lebar 360 dan 1440 px, termasuk pengulangan Kalkulus kelas I, pemblokiran Dasar Pemrograman kelas I, penyimpanan tepat 24 SKS serta penolakan proyeksi 27 SKS.
+
+
 ## 24 November 2026 · UI portal mahasiswa
 
 - Menerapkan navigasi adaptif, banner pengisian, ringkasan beban studi, katalog kelas, dan jadwal mingguan berdasarkan isi draf.

@@ -62,7 +62,7 @@ Profil kerja ini tidak menambahkan identitas, usia, atau semester yang tidak dit
 | Memahami ketersediaan | Kuota, kelengkapan waktu, dan dosen disampaikan terpisah | UXR-04 |
 | Memilih kelas yang dimaksud | Nama kelas diperiksa sebelum tambah atau ganti dikonfirmasi | UXR-05 |
 | Mengetahui hasil tindakan | Pesan proses, berhasil, dan gagal menjelaskan keadaan pilihan | UXR-06 |
-| Memantau beban pilihan | Total dibanding batas demo 8 SKS diperbarui setelah perubahan | UXR-07 |
+| Memantau beban pilihan | Total dibanding batas demo 24 SKS diperbarui setelah perubahan | UXR-07 |
 | Memeriksa hasil jadwal | Daftar hasil memuat hari dan waktu; matriks mingguan merupakan tahap berikutnya | UXR-08 |
 
 UXR-01, UXR-02, UXR-03, dan UXR-05 berstatus Must Have dalam Worksheet 8 sebagaimana dicatat di PRD. UXR-04, UXR-06, dan UXR-07 mendukung demo; UXR-08 berstatus Could Have.
@@ -71,7 +71,7 @@ UXR-01, UXR-02, UXR-03, dan UXR-05 berstatus Must Have dalam Worksheet 8 sebagai
 
 Mahasiswa membuka Penawaran, mencari UX301, lalu membandingkan kelas Rekayasa Interaksi. Ia membaca Kelas A pada Senin 08.00–09.40 WIB, membuka detail, dan mengonfirmasi penambahannya ke draf.
 
-Ketika membuka Analisis Data Kelas A, ia mengetahui bentrok dengan Rekayasa Interaksi A pada Senin 09.00–09.40 WIB. Ia kembali ke alternatif dan memilih Analisis Data B pada Rabu. Total draf menjadi 6 dari 8 SKS.
+Ketika membuka Analisis Data Kelas A, ia mengetahui bentrok dengan Rekayasa Interaksi A pada Senin 09.00–09.40 WIB. Ia kembali ke alternatif dan memilih Analisis Data B pada Rabu. Total draf menjadi 6 dari 24 SKS.
 
 Mahasiswa meninjau daftar dan menyimpan hasil simulasi. Setelah penyimpanan berhasil, hasil ditampilkan dan draf dikosongkan. Data ini merupakan contoh demonstrasi, bukan jadwal atau pengajuan KRS resmi.
 
@@ -197,7 +197,7 @@ Memastikan daftar kelas dan total SKS telah sesuai sebelum hasil simulasi disimp
 
 - Daftar pilihan berisi kode, SKS, nama, kelas, hari, dan waktu.
 - Tindakan **Hapus** untuk setiap kelas.
-- Jumlah kelas dan total dibanding batas simulasi 8 SKS.
+- Jumlah kelas dan total dibanding batas simulasi 24 SKS.
 - Umpan balik perubahan, tombol **Simpan hasil simulasi**, serta pesan proses atau kegagalan.
 - Petunjuk menuju Penawaran ketika draf kosong.
 
@@ -276,7 +276,7 @@ Tinjau KRS → Periksa daftar dan total → Simpan hasil simulasi → Menyimpan�
 
 ## **6.1 Class Selection**
 
-- Kandidat harus memiliki waktu, kuota lebih dari nol, bebas bentrok, dan total proyeksi maksimal 8 SKS.
+- Kandidat harus memiliki waktu, kuota lebih dari nol, bebas bentrok, dan total proyeksi maksimal 24 SKS.
 - Detail menyebut kelas sebelum tambah atau ganti dikonfirmasi; **Batal** tidak mengubah draf.
 - Kandidat yang sudah dipilih menawarkan Tinjau KRS. Kandidat terhalang tetap dapat dibaca dan memiliki jalan ke alternatif.
 - Tombol utama memenuhi target sentuh minimal 44 × 44 piksel CSS sesuai PRD.
@@ -375,7 +375,7 @@ Perilaku diperiksa melalui skenario dalam ACCEPTANCE-CRITERIA. Pemahaman penggun
 
 # **11. UX Design Constraints**
 
-- Seluruh data, kuota, batas 8 SKS, dan hasil pengajuan merupakan simulasi. Header menyatakan **Mode simulasi** dan footer menjelaskan data contoh.
+- Seluruh data, kuota, batas 24 SKS, dan hasil pengajuan merupakan simulasi. Header menyatakan **Mode simulasi** dan footer menjelaskan data contoh.
 - Tidak ada akun, permintaan NIM/kata sandi, integrasi InfoKHS resmi, atau sinkronisasi antarperangkat.
 - Pemeriksaan konflik hanya mencakup kelas demo di draf; agenda luar aplikasi tidak ikut diperiksa. Kuota tidak berubah karena pilihan lokal.
 - Draf dan hasil tersimpan pada alamat serta profil peramban yang sama selama penyimpanan diizinkan. Pencarian bertahan dalam sesi halaman, tidak disimpan secara lokal.

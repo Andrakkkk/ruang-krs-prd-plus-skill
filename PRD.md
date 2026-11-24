@@ -2,7 +2,7 @@
 
 ## **Fitur: Pemilihan Kelas dan Penyusunan KRS Ruang KRS**
 
-**Versi:** 1.0
+**Versi:** 1.1
 
 **Status:** Spesifikasi prototipe
 
@@ -94,7 +94,7 @@ Tampilkan nama mata kuliah dan identitas kelas sebelum pengguna mengonfirmasi ta
 
 ### FR-04 — Tinjau KRS
 
-Tampilkan daftar pilihan dan total terhadap batas demo 8 SKS. Pengguna dapat menghapus kelas, kembali ke penawaran, atau menyimpan hasil simulasi. Pengajuan draf kosong dinonaktifkan. Saat penyimpanan berlangsung, tampilkan status proses dan cegah konfirmasi ganda.
+Tampilkan daftar pilihan dan total terhadap batas demo 24 SKS. Pengguna dapat menghapus kelas, kembali ke penawaran, atau menyimpan hasil simulasi. Pengajuan draf kosong dinonaktifkan. Saat penyimpanan berlangsung, tampilkan status proses dan cegah konfirmasi ganda.
 
 ### FR-05 — Hasil Simulasi
 
@@ -115,7 +115,7 @@ Tampilkan daftar kelas, hari, jam, dan total SKS yang berhasil disimpan. Beri pe
 1. Setiap mata kuliah menyumbang paling banyak satu kelas ke draf. Saat mengganti kelas, abaikan pilihan lama mata kuliah yang sama dalam pemeriksaan bentrok dan perhitungan SKS.
 2. Kelas dengan kuota nol atau waktu belum tersedia tidak dapat ditambahkan. Kuota contoh tetap sama sepanjang simulasi.
 3. Bentrok hanya terjadi pada hari yang sama ketika waktu mulai setiap kelas lebih awal daripada waktu selesai kelas pasangannya. Interval irisan dimulai dari waktu mulai yang lebih akhir dan berakhir pada waktu selesai yang lebih awal. Kelas yang waktunya hanya bersentuhan dapat dipilih apabila memenuhi aturan lain.
-4. Jika penambahan melampaui batas simulasi 8 SKS, tampilkan total yang diproyeksikan dan pertahankan draf.
+4. Jika penambahan melampaui batas simulasi 24 SKS, tampilkan total yang diproyeksikan dan pertahankan draf.
 5. Perubahan yang berhasil disimpan menghasilkan umpan balik. Pengajuan hanya selesai setelah peramban berhasil menyimpan hasil.
 
 ## 8. User Stories
@@ -145,13 +145,17 @@ Tampilkan daftar kelas, hari, jam, dan total SKS yang berhasil disimpan. Beri pe
 
 ### Assumptions
 
-Alamat dan profil peramban yang sama digunakan saat membuka kembali hasil. Jadwal, nama dosen, kuota, dan batas 8 SKS memakai data sintetis untuk demonstrasi.
+Alamat dan profil peramban yang sama digunakan saat membuka kembali hasil. Jadwal, nama dosen, kuota, dan batas 24 SKS memakai data sintetis untuk demonstrasi.
 
 ### Dependencies
 
-Peramban mendukung JavaScript dan penyimpanan lokal. Versi PRD saja dan PRD + Skill menggunakan spesifikasi produk dan data awal yang sama.
+Peramban mendukung JavaScript dan penyimpanan lokal. Varian PRD + Skill mengembangkan data awal untuk skenario mahasiswa semester 7.
 
-### Data Demo Bersama
+### Katalog dan riwayat akademik simulasi
+
+Katalog berisi 26 mata kuliah semester 1, 3, 5, dan 7. Setiap mata kuliah memiliki sembilan kelas A–I. Mahasiswa dapat menyaring penawaran berdasarkan semester, riwayat nilai, hari, atau kuota. Nilai akhir A mengunci seluruh kelas mata kuliah tersebut, termasuk pada tautan langsung. Nilai B dan C memungkinkan pengulangan selama jadwal, kuota, dan batas SKS terpenuhi. Pada tiap semester terdahulu, empat dari enam mata kuliah bernilai A.
+
+### Contoh jadwal untuk skenario demo awal
 
 | Kode | Mata kuliah | SKS | Kelas | Waktu (WIB) | Kuota | Dosen |
 |---|---|---:|---|---|---:|---|
@@ -181,7 +185,7 @@ Peramban mendukung JavaScript dan penyimpanan lokal. Versi PRD saja dan PRD + Sk
 | UXR-04 | Memahami status dan kuota | Tampilkan kuota dan ketersediaan jadwal secara terpisah. Jelaskan jika dosen belum ditetapkan. Aturan simulasi memblokir penambahan kelas penuh dan kelas yang belum memiliki jadwal. |
 | UXR-05 | Memastikan kelas yang akan ditambahkan | Gunakan target sentuh tombol utama minimal 44 × 44 piksel CSS. Saat pengguna akan tambah atau ganti kelas, tampilkan nama mata kuliah dan kelas untuk dikonfirmasi atau dibatalkan sebelum mengubah draf. |
 | UXR-06 | Mengetahui hasil tindakan | Berikan pesan berhasil atau gagal setelah perubahan. Saat menyimpan hasil, tampilkan keadaan diproses dan cegah konfirmasi ganda. Kegagalan mempertahankan draf dan memberi kesempatan mencoba lagi. |
-| UXR-07 | Memantau total SKS | Perbarui total/batas SKS setelah perubahan draf dan tampilkan di navigasi serta tinjauan. Batas demo 8 SKS memungkinkan pengujian peringatan. Pilihan yang melampaui batas tidak mengubah draf. |
+| UXR-07 | Memantau total SKS | Perbarui total/batas SKS setelah perubahan draf dan tampilkan di navigasi serta tinjauan. Batas demo 24 SKS memungkinkan pengujian peringatan. Pilihan yang melampaui batas tidak mengubah draf. |
 | UXR-08 | Memeriksa jadwal mingguan | Berstatus Could Have di Worksheet 8. Demo ini memakai daftar hasil berisi hari dan waktu. Matriks jadwal mingguan direncanakan untuk tahap berikutnya. |
 
-Untuk demonstrasi utama, pilih Rekayasa Interaksi A. Analisis Data A bertumpang tindih pada Senin 09.00–09.40 WIB. Gunakan Analisis Data B sebagai alternatif, lalu simpan dua pilihan dan periksa total 6 SKS. Uji Desain Produk Digital A saat hanya Rekayasa Interaksi A berada di draf untuk memeriksa batas jam 09.40 WIB. Jika draf sudah memiliki dua mata kuliah utama, kelas tambahan itu menghasilkan 9 SKS dan harus ditahan oleh aturan simulasi.
+Untuk demonstrasi utama, pilih Rekayasa Interaksi A. Analisis Data A bertumpang tindih pada Senin 09.00–09.40 WIB. Gunakan Analisis Data B sebagai alternatif, lalu simpan dua pilihan dan periksa total 6 SKS. Uji Desain Produk Digital A saat hanya Rekayasa Interaksi A berada di draf untuk memeriksa batas jam 09.40 WIB. Draf 24 SKS dapat disimpan. Penambahan 3 SKS pada draf tersebut menampilkan proyeksi 27 SKS dan diblokir.

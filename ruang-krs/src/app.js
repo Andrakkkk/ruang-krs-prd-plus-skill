@@ -22,9 +22,7 @@
   let editingDraft = false;
   let classConfirmationId = '';
   let feedback = '';
-  let query = '';
-  let day = '';
-  let availableOnly = false;
+  const filters = { query: '', day: '', semester: '', gradeFilter: '', availableOnly: false };
   let route;
   let announcementTimer;
 
@@ -43,7 +41,7 @@
   };
 
   function updateOfferResults() {
-    const matches = renderOfferResults(query, day, availableOnly, draft);
+    const matches = renderOfferResults(filters, draft);
     document.getElementById('course-count').textContent = matches.count + ' mata kuliah';
     document.getElementById('course-results').innerHTML = matches.html;
   }
@@ -53,7 +51,7 @@
     const focusId = preserveFocus && main.contains(active) ? active.id : '';
     const section = route.course ? 'penawaran' : route.page;
     const draftCredits = totalCredits(draft);
-    const viewState = { draft, result, query, day, availableOnly, feedback, submitting, editingDraft, classConfirmationId, submitNotice };
+    const viewState = { draft, result, filters, feedback, submitting, editingDraft, classConfirmationId, submitNotice };
     navLinks.forEach(link => {
       if (link.dataset.nav === section) link.setAttribute('aria-current', route.course ? 'location' : 'page');
       else link.removeAttribute('aria-current');
@@ -212,15 +210,17 @@
   }
 
   main.addEventListener('change', event => {
-    if (event.target.id === 'day-filter') day = event.target.value;
-    else if (event.target.id === 'available-only') availableOnly = event.target.checked;
+    if (event.target.id === 'semester-filter') filters.semester = event.target.value;
+    else if (event.target.id === 'grade-filter') filters.gradeFilter = event.target.value;
+    else if (event.target.id === 'day-filter') filters.day = event.target.value;
+    else if (event.target.id === 'available-only') filters.availableOnly = event.target.checked;
     else return;
     updateOfferResults();
   });
 
   main.addEventListener('input', event => {
     if (event.target.id !== 'course-search') return;
-    query = event.target.value;
+    filters.query = event.target.value;
     updateOfferResults();
   });
 
@@ -236,10 +236,11 @@
       const search = document.getElementById('course-search');
       document.getElementById('day-filter').value = '';
       document.getElementById('available-only').checked = false;
-      day = '';
-      availableOnly = false;
+      document.getElementById('semester-filter').value = '';
+      document.getElementById('grade-filter').value = '';
+      Object.assign(filters, { day: '', semester: '', gradeFilter: '', availableOnly: false });
       search.value = '';
-      query = '';
+      filters.query = '';
       updateOfferResults();
       search.focus();
     }

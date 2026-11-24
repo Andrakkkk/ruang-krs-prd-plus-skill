@@ -7,7 +7,7 @@ description: Rancang dan periksa antarmuka mobile Ruang KRS versi PRD + Skill, t
 
 ## Acuan proyek
 
-- Baca [PRD](../../../PRD.md) untuk lingkup, data demo, aturan bentrok, dan batas simulasi 8 SKS. Pertahankan kebutuhan serta data yang sama dengan versi PRD saja.
+- Baca [PRD](../../../PRD.md) untuk lingkup, data demo, aturan bentrok, dan batas simulasi 24 SKS. Gunakan riwayat nilai simulasi dan blokir pengambilan ulang seluruh kelas mata kuliah yang bernilai A.
 - Gunakan [UX Specification](../../../UX-SPEC.md) untuk layar dan alur, [Design System](../../../DESIGN-SYSTEM.md) untuk token serta komponen, dan [Interaction Specification](../../../INTERACTION-SPEC.md) untuk konfirmasi, fokus, dan pemulihan.
 - Pilih kasus terdampak dari [Acceptance Criteria](../../../ACCEPTANCE-CRITERIA.md). Dokumen proyek menyimpan rincian; jangan menyalinnya menjadi aturan baru di skill.
 

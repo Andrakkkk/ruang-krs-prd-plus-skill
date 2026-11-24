@@ -70,7 +70,7 @@ Gunakan data kelas pada PRD. Jalankan server statis dari root repositori sebagai
 
 **When:** Ketik `ux301`, lalu kueri yang tidak ditemukan, kemudian **Hapus pencarian**.
 
-**Then:** Kueri pertama menampilkan satu mata kuliah; kueri kedua menampilkan nol hasil dan petunjuk; penghapusan memulihkan empat mata kuliah serta fokus ke masukan.
+**Then:** Kueri pertama menampilkan satu mata kuliah; kueri kedua menampilkan nol hasil dan petunjuk; penghapusan memulihkan 26 mata kuliah serta fokus ke masukan.
 
 ### **AC01-03 — Konteks pencarian dan pemulihan fokus**
 
@@ -82,7 +82,7 @@ Gunakan data kelas pada PRD. Jalankan server statis dari root repositori sebagai
 
 **When:** Buka pilihan, detail A, kembali ke pilihan, lalu penawaran.
 
-**Then:** Dua alternatif berada pada halaman pilihan yang sama. Fokus kembali ke pembuka detail, lalu kartu UX301; kueri tetap `UX301`. Draf tidak berubah karena navigasi.
+**Then:** Sembilan alternatif kelas A–I berada pada halaman pilihan yang sama. Fokus kembali ke pembuka detail, lalu kartu UX301; kueri tetap `UX301`. Draf tidak berubah karena navigasi.
 
 ### **AC01-04 — Tautan langsung dan alamat tidak dikenal**
 
@@ -382,7 +382,7 @@ Gunakan data kelas pada PRD. Jalankan server statis dari root repositori sebagai
 
 **When:** Tambah UX301-A, tambah UX302-B, lalu hapus salah satunya.
 
-**Then:** Total berubah **0 → 3 → 6 → 3 SKS** pada navigasi dan tinjauan tanpa pemuatan ulang; batas demo tetap 8 SKS.
+**Then:** Total berubah **0 → 3 → 6 → 3 SKS** pada navigasi dan tinjauan tanpa pemuatan ulang; batas demo tetap 24 SKS.
 
 ### **AC07-02 — Pilihan melampaui batas SKS**
 
@@ -390,11 +390,11 @@ Gunakan data kelas pada PRD. Jalankan server statis dari root repositori sebagai
 
 **Verification:** UI, keadaan tombol, dan draf.
 
-**Given:** Draf berisi UX301-A dan UX302-B, total 6 SKS.
+**Given:** Draf berisi delapan mata kuliah semester 7 sesuai skenario README, total 24 SKS.
 
-**When:** Buka UX304-A.
+**When:** Buka IF105-A (Kalkulus).
 
-**Then:** Jadwal dapat tidak bentrok, tetapi proyeksi **9 SKS** melampaui batas demo **8 SKS**. Tambah nonaktif; draf tetap 6 SKS.
+**Then:** Jadwal dapat tidak bentrok, tetapi proyeksi **27 SKS** melampaui batas demo **24 SKS**. Tambah nonaktif; draf tetap 24 SKS.
 
 # **10. Verifikasi Jadwal dan Lingkup Lanjutan**
 

@@ -87,7 +87,7 @@ Pengguna membuka detail kandidat yang dapat ditambahkan dan memilih **Tambahkan 
 
 * Kandidat memiliki jadwal dan kuota lebih dari nol.
 * Kandidat bebas bentrok terhadap kelas lain yang akan tetap berada di draf.
-* Total draf setelah perubahan paling banyak 8 SKS. Batas ini berlaku untuk simulasi.
+* Total draf setelah perubahan paling banyak 24 SKS. Batas ini berlaku untuk simulasi.
 * Satu mata kuliah memiliki paling banyak satu kelas dalam draf. Kelas yang sudah dipilih memberi akses **Tinjau KRS**.
 * Kandidat yang terhalang memiliki alasan tertulis, tombol perubahan nonaktif, dan tindakan **Lihat alternatif kelas**.
 
@@ -173,7 +173,7 @@ Kuota, jadwal, dan status terhadap draf adalah informasi terpisah. Label status 
 | ----- | ----- |
 | Etika Profesi A memiliki kuota nol | Tampilkan **0 kursi tersisa** dan **Kelas penuh**. Detail tersedia, aksi penambahan terhalang. |
 | Etika Profesi B memiliki kuota 14 dan waktu belum tersedia | Tampilkan kuota, **Waktu belum tersedia**, **Jadwal belum dapat diperiksa**, dan dosen **Belum ditetapkan**. Aksi penambahan terhalang. |
-| Kandidat akan menaikkan draf dari 6 menjadi 9 SKS | Tampilkan proyeksi 9 SKS dan batas 8 SKS simulasi. Draf tetap sama. |
+| Kandidat akan menaikkan draf dari 24 menjadi 27 SKS | Tampilkan proyeksi 27 SKS dan batas 24 SKS simulasi. Draf tetap sama. |
 | Kandidat sudah berada di draf | Tampilkan **Di draf** pada kartu. Detail menawarkan **Tinjau KRS**. |
 
 ## **7.3 Status Update Behavior**
@@ -208,6 +208,8 @@ Kegagalan menyimpan hasil mempertahankan draf dan hasil terakhir. Jika pengguna 
 
 ## **9.1 Filters**
 
+Filter semester (1, 3, 5, 7) dan riwayat nilai bekerja pada mata kuliah. Filter hari dan kuota bekerja pada alternatif kelas yang sama.
+
 Masukan **Cari mata kuliah** memfilter kartu berdasarkan nama atau kode tanpa membedakan huruf besar dan kecil. Setiap kata yang dipisahkan spasi dicocokkan dengan nama atau kode mata kuliah.
 
 ## **9.2 Result Order**
@@ -222,7 +224,7 @@ Kata kunci tetap tersedia selama pengguna berpindah layar dalam halaman yang sam
 
 ## **10.1 Summary Display**
 
-Navigasi menampilkan total draf dibanding batas 8 SKS. Panel desktop merangkum kelas di draf. Tinjau KRS menampilkan daftar pilihan, jumlah kelas, dan total SKS dibanding batas. Layar Hasil menampilkan kelas, hari, jam, jumlah kelas, dan total SKS yang telah tersimpan.
+Navigasi menampilkan total draf dibanding batas 24 SKS. Panel desktop merangkum kelas di draf. Tinjau KRS menampilkan daftar pilihan, jumlah kelas, dan total SKS dibanding batas. Layar Hasil menampilkan kelas, hari, jam, jumlah kelas, dan total SKS yang telah tersimpan.
 
 ## **10.2 Submission and Result**
 

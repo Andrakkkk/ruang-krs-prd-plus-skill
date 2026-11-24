@@ -2,7 +2,11 @@
   'use strict';
 
   const { classes } = window.RuangKRS;
-  const creditLimit = 8;
+  const creditLimit = 24;
+
+  function hasGradeA(course) {
+    return course.grade === 'A';
+  }
 
   function minutes(time) {
     const [hours, remainder] = time.split('.').map(Number);
@@ -38,7 +42,7 @@
       adjacent,
       projectedCredits,
       exceedsLimit: projectedCredits > creditLimit,
-      canAdd: !selected && Boolean(option.day) && option.seats > 0 && overlaps.length === 0 && projectedCredits <= creditLimit
+      canAdd: !hasGradeA(option.course) && !selected && Boolean(option.day) && option.seats > 0 && overlaps.length === 0 && projectedCredits <= creditLimit
     };
   }
 
@@ -46,5 +50,5 @@
     return ids.reduce((total, id) => total + classes.get(id).course.credits, 0);
   }
 
-  Object.assign(window.RuangKRS, { creditLimit, assess, totalCredits });
+  Object.assign(window.RuangKRS, { creditLimit, assess, totalCredits, hasGradeA });
 })();

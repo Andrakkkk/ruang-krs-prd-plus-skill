@@ -269,7 +269,7 @@ Komponen yang tersedia adalah daftar jadwal. Matriks mingguan, navigasi bulan, p
 - **Bentrok dengan draf KRS:** attention; sebutkan nama kelas dan interval irisan.
 - **Jadwal belum dapat diperiksa:** muted; jelaskan waktu belum tersedia.
 - **Kelas penuh:** penegasan teks pada kuota 0.
-- **Melebihi batas SKS simulasi:** attention; sebutkan proyeksi dan batas 8 SKS.
+- **Melebihi batas SKS simulasi:** attention; sebutkan proyeksi dan batas 24 SKS.
 
 Semua indikator harus terbaca pada ponsel tanpa memerlukan warna atau ingatan dari layar lain.
 

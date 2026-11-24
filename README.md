@@ -2,13 +2,19 @@
 
 Ruang KRS adalah prototipe pengisian Kartu Rencana Studi untuk mahasiswa Universitas Muhammadiyah Malang. Proyek Worksheet 12 Rekayasa Interaksi ini menerapkan kebutuhan dari Worksheet 8, terutama kejelasan informasi kelas dan pemeriksaan bentrok sebelum pemilihan.
 
-Versi ini menggunakan PRD yang sama dengan versi PRD saja, ditambah skill **Rancang KRS Mobile**. Skill tersebut memandu cara menampilkan informasi jadwal dan bentrok, menjaga akses ke draf pada layar ponsel, serta mengembalikan fokus keyboard saat pengguna kembali ke pilihan sebelumnya. Prototipe mencakup lima layar dari penawaran mata kuliah hingga hasil simulasi. Data kelas, batas 8 SKS, dan hasil pengajuan bersifat simulasi.
+Versi ini mengembangkan skenario mahasiswa semester 7 berdasarkan PRD awal dan skill **Rancang KRS Mobile**. Skill tersebut memandu cara menampilkan informasi jadwal dan bentrok, menjaga akses ke draf pada layar ponsel, serta mengembalikan fokus keyboard saat pengguna kembali ke pilihan sebelumnya. Prototipe mencakup lima layar dari penawaran mata kuliah hingga hasil simulasi. Data kelas, batas 24 SKS, dan hasil pengajuan bersifat simulasi.
+
+## Katalog semester ganjil
+
+Profil demo berada di semester 7. Katalog memuat enam mata kuliah per semester untuk semester 1, 3, dan 5, serta delapan mata kuliah semester 7. Setiap mata kuliah menawarkan kelas A–I. Dari 18 mata kuliah semester terdahulu, 12 memiliki nilai A dan terkunci. Enam lainnya dapat diulang selama kelas memenuhi ketentuan jadwal, kuota, dan SKS.
+
+Untuk mendemokan aturannya, filter **Semester 1**, lalu bandingkan **Dasar Pemrograman** (nilai A) dengan **Kalkulus** (nilai B). Buka kelas I masing-masing untuk melihat alasan penguncian atau melanjutkan ke konfirmasi.
 
 ## Dokumen eksperimen
 
 | Dokumen | Peran |
 |---|---|
-| [PRD](PRD.md) | Kebutuhan, ruang lingkup, dan data demo yang juga digunakan versi PRD saja |
+| [PRD](PRD.md) | Kebutuhan, ruang lingkup, dan data demo semester 7 |
 | [Spesifikasi UX](UX-SPEC.md) | Struktur lima layar, navigasi, dan alur pengguna |
 | [Sistem desain](DESIGN-SYSTEM.md) | Aturan tampilan, komponen, dan tata letak responsif |
 | [Spesifikasi interaksi](INTERACTION-SPEC.md) | Perilaku pemilihan kelas, umpan balik, dan pemulihan kesalahan |
@@ -62,12 +68,12 @@ HTML memuat skrip lokal sesuai urutan dependensinya agar aplikasi dapat dijalank
 
 ## Skenario demonstrasi
 
-1. Di **Penawaran**, cari `UX301` dan bandingkan dua kelas Rekayasa Interaksi. Buka Kelas A, pilih **Tambahkan ke draf**, lalu periksa nama kelas sebelum mengonfirmasi. Total draf menjadi **3 dari 8 SKS**.
-2. Buka **Analisis Data Kelas A**. Prototipe menampilkan bentrok dengan Rekayasa Interaksi Kelas A pada Senin **09.00–09.40 WIB**. Gunakan **Lihat alternatif kelas** untuk memilih Analisis Data Kelas B pada Rabu. Total draf menjadi **6 dari 8 SKS**.
+1. Di **Penawaran**, cari `UX301` dan bandingkan kelas A–I Rekayasa Interaksi. Buka Kelas A, pilih **Tambahkan ke draf**, lalu periksa nama kelas sebelum mengonfirmasi. Total draf menjadi **3 dari 24 SKS**.
+2. Buka **Analisis Data Kelas A**. Prototipe menampilkan bentrok dengan Rekayasa Interaksi Kelas A pada Senin **09.00–09.40 WIB**. Gunakan **Lihat alternatif kelas** untuk memilih Analisis Data Kelas B pada Rabu. Total draf menjadi **6 dari 24 SKS**.
 3. Buka **Tinjau KRS**, periksa pilihan dan total SKS, lalu pilih **Simpan hasil simulasi**. Periksa daftar kelas pada layar **Hasil** dan muat ulang halaman untuk memastikan hasil tetap tersedia.
 4. Pilih **Mulai pengisian baru** untuk membuka draf kosong. Hasil sebelumnya tetap tersedia hingga pengajuan baru berhasil disimpan.
 
-Untuk memeriksa kondisi tambahan, buka Etika Profesi Kelas A yang penuh dan Kelas B yang belum memiliki jadwal. Desain Produk Digital Kelas A dapat ditambahkan ketika draf hanya berisi Rekayasa Interaksi Kelas A karena jadwalnya berurutan pada pukul 09.40 WIB. Jika draf sudah berisi 6 SKS, menambah kelas 3 SKS akan melampaui batas simulasi.
+Untuk memeriksa kondisi tambahan, buka Etika Profesi Kelas A yang penuh dan Kelas B yang belum memiliki jadwal. Desain Produk Digital Kelas A dapat ditambahkan ketika draf hanya berisi Rekayasa Interaksi Kelas A karena jadwalnya berurutan pada pukul 09.40 WIB. Untuk mencapai 24 SKS, pilih delapan mata kuliah semester 7: UX301-A, UX302-B, UX304-A, dan IF701-A hingga IF705-A. Membuka Kalkulus A sesudahnya menunjukkan proyeksi 27 SKS.
 
 ## Penyimpanan dan lingkup
 

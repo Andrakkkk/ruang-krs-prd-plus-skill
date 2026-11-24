@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const { classes, totalCredits, creditLimit } = window.RuangKRS;
+  const { classes, totalCredits, creditLimit, hasGradeA } = window.RuangKRS;
   const { offerHash, reviewHash } = window.RuangKRSRoutes;
 
   function arrow() {
@@ -29,8 +29,15 @@
     return `${option.course.name} · Kelas ${option.letter}`;
   }
 
+  function gradeLabel(course) {
+    if (hasGradeA(course)) return 'Nilai A · Terkunci';
+    if (course.grade) return `Nilai ${course.grade} · Bisa diulang`;
+    return 'Belum diambil';
+  }
+
   function courseContext(course) {
-    return `<p class="course-context"><span class="course-code">${course.code}</span><span>${course.credits} SKS</span></p>`;
+    return `<p class="course-context"><span class="course-code">${course.code}</span><span>${course.credits} SKS</span>
+      <span>Semester ${course.semester}</span><span class="grade-tag">${gradeLabel(course)}</span></p>`;
   }
 
   function statusBox(kind, title, content = '') {
@@ -136,7 +143,7 @@
   window.RuangKRSUI = {
     fullName,
     components: {
-      arrow, backLink, intro, schedule, courseContext, creditStatus,
+      arrow, backLink, intro, schedule, gradeLabel, courseContext, creditStatus,
       conflictStatus, facts, draftPanel, emptyState, selectionList,
       summaryPanel, escapeAttribute
     }

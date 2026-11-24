@@ -14,11 +14,11 @@
       return { page: path.slice(1) };
     }
 
-    const courseMatch = /^\/mata-kuliah\/(UX\d+)$/.exec(path);
+    const courseMatch = /^\/mata-kuliah\/((?:UX|IF)\d+)$/.exec(path);
     const course = courseMatch && courses.find(item => item.code === courseMatch[1]);
     if (course) return { page: 'pilihan', course };
 
-    const classMatch = /^\/kelas\/(UX\d+-[A-Z])$/.exec(path);
+    const classMatch = /^\/kelas\/((?:UX|IF)\d+-[A-Z])$/.exec(path);
     const option = classMatch && classes.get(classMatch[1]);
     if (option) return { page: 'detail', option, course: option.course };
 

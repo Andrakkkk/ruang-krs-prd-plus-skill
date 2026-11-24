@@ -16,7 +16,7 @@ Ruang KRS membantu mahasiswa UMM membandingkan kelas, memahami bentrok, dan meme
 
 | Dokumen | Gunakan untuk |
 |---|---|
-| [PRD.md](PRD.md) | Tujuan, ruang lingkup, ID UXR, aturan produk, dan data simulasi yang juga dipakai versi PRD saja |
+| [PRD.md](PRD.md) | Tujuan, ruang lingkup, ID UXR, aturan produk, dan data simulasi semester 7 |
 | [UX-SPEC.md](UX-SPEC.md) | Lima layar, struktur navigasi, alur pemilihan, dan keadaan pengguna |
 | [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) | Warna, tipografi, komponen, dan tata letak responsif |
 | [INTERACTION-SPEC.md](INTERACTION-SPEC.md) | Aturan konfirmasi, validasi, fokus, dan pemulihan dari kegagalan |
@@ -42,7 +42,7 @@ Untuk pekerjaan antarmuka KRS di ponsel, gunakan juga [Skill Rancang KRS Mobile]
 ## 5. Feature Implementation Rules
 
 - **Penawaran dan pilihan kelas.** Gunakan data yang sama dengan PRD dan tampilkan jam dalam format 24 jam WIB.
-- **Bentrok dan batas SKS.** Periksa irisan pada hari yang sama. Hitung ulang ketika kelas diganti. Gunakan batas simulasi 8 SKS.
+- **Bentrok dan batas SKS.** Periksa irisan pada hari yang sama. Hitung ulang ketika kelas diganti. Gunakan batas simulasi 24 SKS.
 - **Konfirmasi dan hasil.** Tampilkan identitas kelas sebelum mutasi. Tampilkan keadaan proses serta pesan berhasil atau gagal.
 - **Penyimpanan.** Pertahankan hasil terakhir saat draf berubah. Bila draf sudah berubah di tab lain, tampilkan keadaan terbaru agar pengguna dapat meninjau ulang.
 
@@ -71,7 +71,7 @@ Bandingkan layar yang diubah dengan pola pada sistem desain. Pastikan pesan stat
 
 ## 11. Scope Control
 
-Pertahankan ruang lingkup prototipe, data sintetis, serta penawaran dan batas demo yang sama saat membandingkan kedua versi. Matriks jadwal mingguan merupakan pengembangan lanjutan. Integrasi InfoKHS, kuota nyata, dan akun mahasiswa berada di luar ruang lingkup.
+Pertahankan ruang lingkup prototipe, data sintetis, serta catatan perbedaan katalog dan batas SKS saat membandingkan kedua versi. Matriks jadwal mingguan merupakan pengembangan lanjutan. Integrasi InfoKHS, kuota nyata, dan akun mahasiswa berada di luar ruang lingkup.
 
 ## 12. Decision and Assumption Management
 

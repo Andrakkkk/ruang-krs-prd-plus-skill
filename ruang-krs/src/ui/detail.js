@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const { assess } = window.RuangKRS;
+  const { assess, hasGradeA } = window.RuangKRS;
   const { reviewHash, courseHash } = window.RuangKRSRoutes;
   const UI = window.RuangKRSUI;
   const { fullName } = UI;
@@ -9,6 +9,9 @@
 
   function detailAction(option, status, state) {
     const { classConfirmationId, submitting } = state;
+    if (hasGradeA(option.course)) {
+      return '<button class="button button-primary" id="add-class" type="button" disabled>Pengambilan terkunci</button><a class="button button-secondary" href="#/penawaran">Pilih mata kuliah lain</a>';
+    }
     if (status.selected) {
       return `<a class="button button-primary" href="${reviewHash}">Tinjau KRS ${arrow()}</a>`;
     }
@@ -40,7 +43,8 @@
     }
 
     let unavailable = '';
-    if (option.seats === 0) unavailable = '<p class="action-note">Kelas penuh. Pilih kelas lain yang masih memiliki kuota.</p>';
+    if (hasGradeA(option.course)) unavailable = '<p class="inline-alert">Nilai akhir mata kuliah ini sudah A. Semua kelas A–I terkunci untuk pengambilan ulang.</p>';
+    else if (option.seats === 0) unavailable = '<p class="action-note">Kelas penuh. Pilih kelas lain yang masih memiliki kuota.</p>';
     else if (!option.day) unavailable = '<p class="action-note">Waktu kelas perlu tersedia sebelum kelas dapat dipilih.</p>';
     else if (status.overlaps.length) unavailable = '<p class="action-note">Pilih alternatif agar jadwal di draf bebas bentrok.</p>';
 
