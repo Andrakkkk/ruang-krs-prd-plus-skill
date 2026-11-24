@@ -15,7 +15,7 @@ Buka [struktur aplikasi](../../../README.md#struktur-aplikasi) untuk menemukan t
 
 ## Informasi dan keputusan kelas
 
-- Pertahankan karakter ruang kerja akademik serta token sistem desain: latar hangat, teks navy, aksen merah bata, dan angka waktu berlebar konsisten. Gunakan panel draf desktop dan akses total SKS pada navigasi ponsel tanpa menutup isi.
+- Pertahankan karakter ruang kerja akademik serta token sistem desain: latar hangat, teks gelap, banner kuning, tombol biru, dan angka waktu berlebar konsisten. Gunakan panel draf desktop dan akses total SKS pada navigasi ponsel tanpa menutup isi.
 - Susun identitas kelas, hari dan jam WIB, kuota, dosen, lalu tindakan secara konsisten. Bedakan kuota penuh, waktu belum diketahui, dan bentrok dengan draf. Jika waktu belum tersedia, jelaskan bahwa jadwal belum dapat diperiksa.
 - Tampilkan nama kelas penyebab serta rentang irisan dekat alternatif yang bentrok. Sediakan jalan kembali ke alternatif. Jam yang hanya bersentuhan tidak bentrok; penggantian kelas mengabaikan pilihan lama dari mata kuliah yang sama saat memeriksa jadwal dan SKS.
 - Terapkan tambah atau ganti setelah konfirmasi identitas kelas. Pertahankan hasil terakhir saat draf berubah. Tindakan dari tab dengan draf usang harus ditahan dan meminta pengguna meninjau data terbaru; jangan mengklaim perlindungan serentak penuh bila Web Locks tidak tersedia.

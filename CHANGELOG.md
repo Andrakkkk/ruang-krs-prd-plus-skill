@@ -1,5 +1,13 @@
 # Changelog Ruang KRS
 
+## 24 November 2026 · UI portal mahasiswa
+
+- Menerapkan navigasi adaptif, banner pengisian, ringkasan beban studi, katalog kelas, dan jadwal mingguan berdasarkan isi draf.
+- Menambahkan filter hari dan kuota, status bentrok di katalog, serta dialog contoh silabus dan dosen untuk tiap mata kuliah.
+- Mempertahankan empat mata kuliah simulasi, batas 8 SKS, dan konfirmasi sebelum kelas masuk ke draf.
+- Memeriksa katalog, kombinasi filter, dialog, dan pengembalian fokus di Chrome pada lebar 360, 768, dan 1440 px.
+
+
 ## Unreleased
 
 ### Dokumentasi

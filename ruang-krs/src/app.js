@@ -23,6 +23,8 @@
   let classConfirmationId = '';
   let feedback = '';
   let query = '';
+  let day = '';
+  let availableOnly = false;
   let route;
   let announcementTimer;
 
@@ -41,7 +43,7 @@
   };
 
   function updateOfferResults() {
-    const matches = renderOfferResults(query);
+    const matches = renderOfferResults(query, day, availableOnly, draft);
     document.getElementById('course-count').textContent = matches.count + ' mata kuliah';
     document.getElementById('course-results').innerHTML = matches.html;
   }
@@ -51,7 +53,7 @@
     const focusId = preserveFocus && main.contains(active) ? active.id : '';
     const section = route.course ? 'penawaran' : route.page;
     const draftCredits = totalCredits(draft);
-    const viewState = { draft, result, query, feedback, submitting, editingDraft, classConfirmationId, submitNotice };
+    const viewState = { draft, result, query, day, availableOnly, feedback, submitting, editingDraft, classConfirmationId, submitNotice };
     navLinks.forEach(link => {
       if (link.dataset.nav === section) link.setAttribute('aria-current', route.course ? 'location' : 'page');
       else link.removeAttribute('aria-current');
@@ -64,7 +66,7 @@
       ${screens[route.page](viewState)}`;
 
     const pageTitle = route.option ? fullName(route.option) : document.getElementById('page-heading').textContent;
-    document.title = `${pageTitle} · Ruang KRS`;
+    document.title = `${pageTitle} Â· Ruang KRS`;
     if (focusId) document.getElementById(focusId)?.focus({ preventScroll: true });
   }
 
@@ -209,6 +211,13 @@
     document.getElementById(open ? 'confirm-class' : 'add-class').focus();
   }
 
+  main.addEventListener('change', event => {
+    if (event.target.id === 'day-filter') day = event.target.value;
+    else if (event.target.id === 'available-only') availableOnly = event.target.checked;
+    else return;
+    updateOfferResults();
+  });
+
   main.addEventListener('input', event => {
     if (event.target.id !== 'course-search') return;
     query = event.target.value;
@@ -225,6 +234,10 @@
     if (button.dataset.remove) removeClass(button.dataset.remove);
     if (button.id === 'clear-search') {
       const search = document.getElementById('course-search');
+      document.getElementById('day-filter').value = '';
+      document.getElementById('available-only').checked = false;
+      day = '';
+      availableOnly = false;
       search.value = '';
       query = '';
       updateOfferResults();

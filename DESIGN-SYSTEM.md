@@ -2,13 +2,25 @@
 
 ## **Project: Ruang KRS**
 
-**Version:** 1.0
+**Version:** 1.1
 
 **Status:** Spesifikasi desain prototipe simulasi · Varian PRD + Skill
 
 **Reference:** [PRD.md](PRD.md) v1.0, [UX-SPEC.md](UX-SPEC.md) v1.0, [Rancang KRS Mobile](.agents/skills/rancang-krs-mobile/SKILL.md)
 
 ---
+
+## Antarmuka portal aktif · 24 November 2026
+
+Versi 1.1 menerapkan desain portal dari referensi HTML. Gunakan [portal.css](ruang-krs/assets/css/portal.css) untuk warna, ukuran, dan tata letak akhir. Bagian 1–9 di bawah mendokumentasikan dasar versi 1.0 sebelum lapisan portal diterapkan.
+
+| Elemen | Implementasi portal |
+|---|---|
+| Palet | Kanvas krem, panel putih, teks gelap, banner dan menu aktif kuning, tombol aksi biru, serta peringatan merah dengan label |
+| Tata letak | Sidebar mulai 64rem, navigasi horizontal pada layar lebih sempit, katalog satu kolom dan ringkasan draf di desktop |
+| Katalog | Pencarian nama atau kode, filter hari dan kuota pada kelas yang sama, jadwal dan status tiap kelas, serta ringkasan SKS berdasarkan draf |
+| Silabus | Dialog berisi contoh tujuan belajar, topik, dosen, dan jadwal. Tombol tutup atau Escape mengembalikan fokus ke pemicu. |
+| Tipografi dan panel | Judul sans serif tebal, bingkai gelap 2px, dan bayangan tegas pada panel utama |
 
 # **1. Design Direction**
 

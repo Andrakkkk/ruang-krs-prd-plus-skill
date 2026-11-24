@@ -16,32 +16,31 @@
   <script src="src/ui/detail.js" defer></script>
   <script src="src/ui/review.js" defer></script>
   <script src="src/ui/results.js" defer></script>
+  <script src="src/ui/syllabus.js" defer></script>
   <script src="src/app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#konten">Lompat ke konten</a>
   <header class="site-header">
-    <div class="shell header-inner">
-      <div class="brand-area">
-        <a class="brand" href="#/penawaran" aria-label="Ruang KRS, penawaran mata kuliah">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span>Ruang KRS</span>
-        </a>
-        <span class="simulation-label">Mode simulasi</span>
-      </div>
-      <nav class="main-nav" aria-label="Navigasi utama">
-        <a href="#/penawaran" data-nav="penawaran">Penawaran</a>
-        <a href="#/tinjau" data-nav="tinjau">Tinjau KRS <span id="draft-count" class="nav-count" aria-hidden="true">0</span></a>
-        <a href="#/hasil" data-nav="hasil">Hasil</a>
-      </nav>
-    </div>
+    <a class="brand" href="#/penawaran"><span class="brand-mark" aria-hidden="true"></span>
+      <span>Ruang KRS<small>Portal mahasiswa</small></span></a>
+    <div class="header-campus"><span class="active-dot"></span> Mode simulasi <b>UMM</b></div>
   </header>
+  <aside class="academic-nav">
+    <p class="rail-label">Menu akademik</p>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="#/penawaran" data-nav="penawaran"><span aria-hidden="true">▦</span> Penawaran</a>
+      <a href="#/tinjau" data-nav="tinjau"><span aria-hidden="true">≡</span> Tinjau KRS</a>
+      <a href="#/hasil" data-nav="hasil"><span aria-hidden="true">✓</span> Hasil</a>
+    </nav>
+    <div class="rail-total">Beban studi <strong id="draft-count">0 SKS</strong></div>
+  </aside>
   <main id="konten" class="shell page" tabindex="-1">
     <noscript>Aktifkan JavaScript untuk menjalankan simulasi Ruang KRS.</noscript>
   </main>
   <footer class="site-footer shell">
     <span>Ruang KRS</span>
-    <span>Simulasi untuk mahasiswa UMM · Seluruh data merupakan contoh.</span>
+    <span>Simulasi untuk mahasiswa UMM Â· Seluruh data merupakan contoh.</span>
   </footer>
   <div id="announcement" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 </body>
